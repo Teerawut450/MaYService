@@ -147,6 +147,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="Upload" id="zIQ-8m-O3F">
                                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="uploadButton:" destination="5kW-H4-xJ5" id="4wy-mA-mJi"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -181,6 +184,11 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="uHe-hQ-ybr" id="gsn-sL-aFu"/>
+                        <outlet property="passTextField" destination="7hl-V8-2B1" id="pvf-Sc-RIn"/>
+                        <outlet property="userTextField" destination="Joa-Eb-a98" id="0II-g9-xBB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSY-do-tgq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

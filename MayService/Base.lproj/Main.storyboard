@@ -189,7 +189,7 @@
     </scenes>
     <resources>
         <image name="BackArrow" width="72" height="72"/>
-        <image name="Logo" width="133" height="133"/>
+        <image name="Logo" width="170.5" height="170.5"/>
         <image name="Upload" width="72" height="72"/>
         <image name="Wallpaper" width="666.5" height="1000"/>
     </resources>

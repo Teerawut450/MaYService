@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         user = userTextField.text
         pass = passTextField.text
         if (checkSpace(user: user!, pass: pass!)){
-            showAlert(title: "OK", message: "OK")
+            //showAlert(title: "OK", message: "OK")
             checkAuthen(user: user!, pass: pass!)
         } else {
             showAlert(title: "FAIL", message: "FAIL")
@@ -52,11 +52,45 @@ class ViewController: UIViewController {
             }
             
             do {
+                
+                //Read JSON from API
                 let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: [])
                 print("JSON ==> \(jsonResponse)")
+                
+                
+                // Change JSON to Array
+                
+                guard let jsonArray = jsonResponse as? [[String: Any]] else {
+                    return
+                }
+                
+                print("jsonArray ==> \(jsonArray)")
+                
+                guard let jsonDictionary: Dictionary = jsonArray[0] else {
+                    return
+                }
+                print("jsonDic ==> \(jsonDictionary)")
+                let truePassword: String  = jsonDictionary["Password"]! as! String
+                
+                print("==> \(truePassword)")
+                
+                if pass == truePassword {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "GoService", sender: self)
+                    }
+                }
+                else {
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Password Incorrect", message: "Please try again!")
+                    }
+                }
+                
+                
+                
             } catch let myError {
                 print(myError)
                 print("NO \(user) in my Database")
+                
                 DispatchQueue.main.async {
                     self.showAlert(title: "User Incorrect", message: "NO \(user) in my Database")
                 }

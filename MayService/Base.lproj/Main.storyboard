@@ -142,7 +142,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="BackArrow" id="m1Y-JY-glz">
                                             <color key="tintColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="VxA-cI-H4j"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="BackMainScreen" id="VxA-cI-H4j"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="Upload" id="zIQ-8m-O3F">

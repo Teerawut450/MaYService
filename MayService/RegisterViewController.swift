@@ -34,6 +34,35 @@ class RegisterViewController: UIViewController {
         let myConstant = MyConstant()
         let urlPHP: String = myConstant.findURLaddUser(name: name, user: user, pass: pass)
         print("This is url ==> \(urlPHP)")
+        
+        
+        // Upload Process
+        let url = URL(string: urlPHP)
+        let request = NSMutableURLRequest(url: url!)
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { data,response,error in
+            if error != nil {
+                print("Have Error")
+            } else {
+                //Receive Data
+                if let testData = data {
+                    let canReadData = NSString(data: testData, encoding: String.Encoding.utf8.rawValue)
+                    print("canReadData is ==> \(String(describing: canReadData))")
+                    
+                    let myResponse: String = canReadData! as String
+                    if Bool(myResponse)! {
+                        print("Success")
+                        
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "BackMainScreen", sender: self)
+                        }
+                        
+                    } else {
+                       print("Fail")
+                    }
+                }
+            }
+        } // End Task
+        task.resume()
     }
     
     
@@ -51,6 +80,7 @@ class RegisterViewController: UIViewController {
         
 //        สั่งให้ ViewController ด้านหลังหยุด
         self.present(objAlert, animated: true, completion: nil)
+        
         
     }
     

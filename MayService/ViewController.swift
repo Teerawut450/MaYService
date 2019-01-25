@@ -29,10 +29,46 @@ class ViewController: UIViewController {
         pass = passTextField.text
         if (checkSpace(user: user!, pass: pass!)){
             showAlert(title: "OK", message: "OK")
+            checkAuthen(user: user!, pass: pass!)
         } else {
             showAlert(title: "FAIL", message: "FAIL")
         }
     }
+    
+    
+    func checkAuthen(user: String, pass: String) -> Void {
+        let myConstant = MyConstant()
+        let urlPHP = myConstant.findJSONwhereUser(user: user)
+        print("URL ==> \(urlPHP)")
+        
+        guard let url = URL(string: urlPHP) else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            
+            guard let dataResponse = data, error == nil else {
+                print("Have Error")
+                return
+            }
+            
+            do {
+                let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: [])
+                print("JSON ==> \(jsonResponse)")
+            } catch let myError {
+                print(myError)
+                print("NO \(user) in my Database")
+                DispatchQueue.main.async {
+                    self.showAlert(title: "User Incorrect", message: "NO \(user) in my Database")
+                }
+            }
+            
+            
+        } // End Task
+        task.resume()
+        
+        
+    }
+    
     
     
     func checkSpace(user: String,pass: String) -> Bool {
@@ -40,7 +76,6 @@ class ViewController: UIViewController {
             //Have Space
             //print("Have Space!!!")
             return false
-            
         } else{
             return true
         }

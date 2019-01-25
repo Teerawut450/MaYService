@@ -15,4 +15,8 @@ class MyConstant {
         return result
     }
     
+    func findJSONwhereUser(user: String) -> String {
+        let result = "https://www.androidthai.in.th/hit/getUserWhereUserMay.php?isAdd=true&User=\(user)"
+        return result
+    }
 }   //My Constant Class

@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASS :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i6C-eD-EcA">
-                                <rect key="frame" x="36.5" y="349" width="302" height="40"/>
+                                <rect key="frame" x="36.5" y="319" width="302" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="302" id="O3Z-7d-VOy"/>
                                 </constraints>
@@ -47,7 +47,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USER :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yi-Ed-2Po">
-                                <rect key="frame" x="36.5" y="291" width="302" height="40"/>
+                                <rect key="frame" x="36.5" y="261" width="302" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="302" id="cLW-B1-QHr"/>
                                 </constraints>
@@ -55,8 +55,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8K-cK-ZhP">
-                                <rect key="frame" x="36.5" y="411" width="302" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8K-cK-ZhP">
+                                <rect key="frame" x="36.5" y="374" width="302" height="48"/>
                                 <color key="backgroundColor" red="0.82885259389877319" green="0.62450361251831055" blue="0.21554529666900635" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="302" id="XPJ-5K-WUQ"/>
@@ -69,8 +69,8 @@
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AFE-gc-sss"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utE-Xi-cVx">
-                                <rect key="frame" x="154" y="467" width="67" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utE-Xi-cVx">
+                                <rect key="frame" x="154" y="426" width="67" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="bNm-cs-FIt"/>
                                 </constraints>
@@ -91,7 +91,7 @@
                             <constraint firstItem="W8K-cK-ZhP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LgQ-ep-f7c"/>
                             <constraint firstItem="6yi-Ed-2Po" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NlA-Rf-Kbn"/>
                             <constraint firstItem="utE-Xi-cVx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q1X-C9-YT6"/>
-                            <constraint firstItem="6yi-Ed-2Po" firstAttribute="top" secondItem="jid-nd-2ps" secondAttribute="bottom" constant="53" id="SrZ-p5-OlL"/>
+                            <constraint firstItem="6yi-Ed-2Po" firstAttribute="top" secondItem="jid-nd-2ps" secondAttribute="bottom" constant="23" id="SrZ-p5-OlL"/>
                             <constraint firstItem="uRO-q7-l7F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="VIo-jy-xT1"/>
                             <constraint firstItem="McY-Ur-s4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VgH-ks-FJ4"/>
                             <constraint firstItem="uRO-q7-l7F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bt5-L4-nVc"/>

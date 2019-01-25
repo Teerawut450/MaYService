@@ -30,6 +30,31 @@ class RegisterViewController: UIViewController {
     } //Main Method
     
     
+    func uploadToServer(name: String, user: String, pass: String) -> Void {
+        let myConstant = MyConstant()
+        let urlPHP: String = myConstant.findURLaddUser(name: name, user: user, pass: pass)
+        print("This is url ==> \(urlPHP)")
+    }
+    
+    
+    func showAlert(title: String,message: String) -> Void {
+        
+        let objAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        objAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
+            objAlert.dismiss(animated: true, completion: nil)
+        }))
+        
+        
+        objAlert.addAction(UIAlertAction(title: "CANCEL", style: UIAlertAction.Style.default, handler: { (action) in
+            objAlert.dismiss(animated: true, completion: nil)
+        }))
+        
+//        สั่งให้ ViewController ด้านหลังหยุด
+        self.present(objAlert, animated: true, completion: nil)
+        
+    }
+    
+    
     @IBAction func uploadButton(_ sender: UIBarButtonItem) {
         
         //Get value from TextField
@@ -45,9 +70,12 @@ class RegisterViewController: UIViewController {
         //Check Space
         if (name!.count == 0) || (user!.count == 0) || (pass!.count == 0) {
             //Have Space
-            print("Have Space!!!")
+            //print("Have Space!!!")
+            showAlert(title: "Error", message: "Have space. Please fill all text")
+            
         } else{
             print("No Space")
+            uploadToServer(name: name!, user: user!, pass: pass!)
         }
         
     } //Upload Button

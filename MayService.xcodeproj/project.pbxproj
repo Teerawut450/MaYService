@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE9CCFD721F998CA00ECB562 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CCFD621F998CA00ECB562 /* RegisterViewController.swift */; };
+		CE9CCFD921FAB13D00ECB562 /* MyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CCFD821FAB13D00ECB562 /* MyConstant.swift */; };
 		CEC1160E21F97A9A00473650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1160D21F97A9A00473650 /* AppDelegate.swift */; };
 		CEC1161021F97A9A00473650 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1160F21F97A9A00473650 /* ViewController.swift */; };
 		CEC1161321F97A9A00473650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC1161121F97A9A00473650 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		CE9CCFD621F998CA00ECB562 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CE9CCFD821FAB13D00ECB562 /* MyConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyConstant.swift; sourceTree = "<group>"; };
 		CEC1160A21F97A9A00473650 /* MayService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MayService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC1160D21F97A9A00473650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC1160F21F97A9A00473650 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				CEC1160F21F97A9A00473650 /* ViewController.swift */,
 				CEC1161121F97A9A00473650 /* Main.storyboard */,
 				CE9CCFD621F998CA00ECB562 /* RegisterViewController.swift */,
+				CE9CCFD821FAB13D00ECB562 /* MyConstant.swift */,
 				CEC1161421F97A9B00473650 /* Assets.xcassets */,
 				CEC1161621F97A9B00473650 /* LaunchScreen.storyboard */,
 				CEC1161921F97A9B00473650 /* Info.plist */,
@@ -141,6 +144,7 @@
 				CE9CCFD721F998CA00ECB562 /* RegisterViewController.swift in Sources */,
 				CEC1161021F97A9A00473650 /* ViewController.swift in Sources */,
 				CEC1160E21F97A9A00473650 /* AppDelegate.swift in Sources */,
+				CE9CCFD921FAB13D00ECB562 /* MyConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

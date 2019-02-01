@@ -48,6 +48,7 @@
 			children = (
 				CEC1160C21F97A9A00473650 /* MayService */,
 				CEC1160B21F97A9A00473650 /* Products */,
+				CEF0CD0622049B90004FF246 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +75,13 @@
 				CEC1161921F97A9B00473650 /* Info.plist */,
 			);
 			path = MayService;
+			sourceTree = "<group>";
+		};
+		CEF0CD0622049B90004FF246 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +116,14 @@
 				TargetAttributes = {
 					CEC1160921F97A9A00473650 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

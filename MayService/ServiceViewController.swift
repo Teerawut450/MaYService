@@ -3,7 +3,7 @@ import MapKit
 import CoreLocation
 
 
-class ServiceViewController: UIViewController {
+class ServiceViewController: UIViewController , CLLocationManagerDelegate{
     
     
     @IBOutlet weak var myMapView: MKMapView!
@@ -14,12 +14,17 @@ class ServiceViewController: UIViewController {
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
     
+    var TimerTime = Timer()
+    
     override func viewDidLoad() {
         
         
         
         super.viewDidLoad()
-        checkLocationServices()
+//        checkLocationServices()
+        TimerTime = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkLocationServices), userInfo: Void.self, repeats: true)
+//        TimererTime = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: checkLocationServices(), userInfo: nil, repeats: true)
+        
         
 //        showMapType2(lat: 13.606352, long:100.765416)
         //showMap(lat: 13.606352, long:100.765416)
@@ -30,6 +35,10 @@ class ServiceViewController: UIViewController {
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        if let LatLong = locationManager.location?.coordinate{
+            LabelLat.text = String(LatLong.latitude)
+            LabelLon.text = String(LatLong.longitude)
+        }
 //        TextFieldLat.Text = locationManager.delegate.
     }
     
@@ -40,8 +49,8 @@ class ServiceViewController: UIViewController {
             myMapView.setRegion(region, animated: true)
 //            print("Lat ==> \(location.latitude)")
 //            print("Long ==> \(location.longitude)")
-            LabelLat.text = String(location.latitude)
-            LabelLon.text = String(location.longitude)
+//            LabelLat.text = String(location.latitude)
+//            LabelLon.text = String(location.longitude)
             
             
             
@@ -49,7 +58,7 @@ class ServiceViewController: UIViewController {
     }
     
     
-    func checkLocationServices() {
+    @objc func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuthorization()
@@ -63,7 +72,7 @@ class ServiceViewController: UIViewController {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             myMapView.showsUserLocation = true
-            centerViewOnUserLocation()
+            //centerViewOnUserLocation()
             locationManager.startUpdatingLocation()
             break
         case .denied:
@@ -128,18 +137,18 @@ class ServiceViewController: UIViewController {
 //    }
     
 } // Main Class
-extension ServiceViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-        myMapView.setRegion(region, animated: true)
-        
-        
-    }
-    
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkLocationAuthorization()
-    }
-}
+//extension ServiceViewController: CLLocationManagerDelegate {
+//
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        guard let location = locations.last else { return }
+//        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+//        myMapView.setRegion(region, animated: true)
+//
+//
+//    }
+//
+//
+//    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+//        checkLocationAuthorization()
+//    }
+//}

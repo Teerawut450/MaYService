@@ -6,10 +6,10 @@ class ServiceViewController: UIViewController {
     
     @IBOutlet weak var myMapView: MKMapView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         showMapType2(lat: 13.606352, long:100.765416)
         //showMap(lat: 13.606352, long:100.765416)
     } //Main Method
@@ -61,5 +61,5 @@ class ServiceViewController: UIViewController {
         mapItem.name = "Home"
         mapItem.openInMaps(launchOptions: options)
     }
-
+    
 } // Main Class

@@ -39,5 +39,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Take Photo</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Save to CameraRoll</string>
 </dict>
 </plist>

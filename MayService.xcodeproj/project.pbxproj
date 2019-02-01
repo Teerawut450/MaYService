@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE347A33220164620008ABF4 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE347A32220164620008ABF4 /* TakePhotoViewController.swift */; };
 		CE9CCFD721F998CA00ECB562 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CCFD621F998CA00ECB562 /* RegisterViewController.swift */; };
 		CE9CCFD921FAB13D00ECB562 /* MyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CCFD821FAB13D00ECB562 /* MyConstant.swift */; };
 		CE9CCFDB21FAC02D00ECB562 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CCFDA21FAC02D00ECB562 /* ServiceViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE347A32220164620008ABF4 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
 		CE9CCFD621F998CA00ECB562 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CE9CCFD821FAB13D00ECB562 /* MyConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyConstant.swift; sourceTree = "<group>"; };
 		CE9CCFDA21FAC02D00ECB562 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				CEC1160D21F97A9A00473650 /* AppDelegate.swift */,
 				CEC1160F21F97A9A00473650 /* ViewController.swift */,
 				CEC1161121F97A9A00473650 /* Main.storyboard */,
+				CE347A32220164620008ABF4 /* TakePhotoViewController.swift */,
 				CE9CCFDA21FAC02D00ECB562 /* ServiceViewController.swift */,
 				CE9CCFD621F998CA00ECB562 /* RegisterViewController.swift */,
 				CE9CCFD821FAB13D00ECB562 /* MyConstant.swift */,
@@ -148,6 +151,7 @@
 				CEC1161021F97A9A00473650 /* ViewController.swift in Sources */,
 				CEC1160E21F97A9A00473650 /* AppDelegate.swift in Sources */,
 				CE9CCFDB21FAC02D00ECB562 /* ServiceViewController.swift in Sources */,
+				CE347A33220164620008ABF4 /* TakePhotoViewController.swift in Sources */,
 				CE9CCFD921FAB13D00ECB562 /* MyConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

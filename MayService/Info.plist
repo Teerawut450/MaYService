@@ -43,5 +43,7 @@
 	<string>Take Photo</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Save to CameraRoll</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This is why we need your location</string>
 </dict>
 </plist>

@@ -226,20 +226,60 @@
                                     <segue destination="eIq-rU-XIU" kind="show" id="ybR-kT-pmP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAT :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhQ-D7-ATY">
+                                <rect key="frame" x="37" y="684" width="39" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="39" id="xhL-R5-5yH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spb-Kl-N86">
+                                <rect key="frame" x="89" y="684" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LON :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-PV-vV0">
+                                <rect key="frame" x="37" y="713" width="43" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="43" id="MxG-IR-dj8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hs-ZF-hS2">
+                                <rect key="frame" x="89" y="713" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ezq-PV-vV0" firstAttribute="top" secondItem="JhQ-D7-ATY" secondAttribute="bottom" constant="8" id="3rH-lx-4A0"/>
+                            <constraint firstItem="Ezq-PV-vV0" firstAttribute="leading" secondItem="Ghf-QP-YC1" secondAttribute="leading" constant="37" id="7ZQ-Ly-J1t"/>
+                            <constraint firstItem="8hs-ZF-hS2" firstAttribute="leading" secondItem="Ezq-PV-vV0" secondAttribute="trailing" constant="9" id="8uX-BG-IaC"/>
                             <constraint firstItem="Ghf-QP-YC1" firstAttribute="trailing" secondItem="RwI-Ch-0Qb" secondAttribute="trailing" constant="89.329999999999998" id="98W-Le-Zlo"/>
                             <constraint firstItem="Ghf-QP-YC1" firstAttribute="bottom" secondItem="ydz-n3-Xbu" secondAttribute="bottom" constant="116" id="DYi-pn-xvd"/>
+                            <constraint firstItem="spb-Kl-N86" firstAttribute="top" secondItem="ydz-n3-Xbu" secondAttribute="bottom" constant="22" id="L9N-dN-QIa"/>
                             <constraint firstItem="ydz-n3-Xbu" firstAttribute="leading" secondItem="Ghf-QP-YC1" secondAttribute="leading" id="ShA-ny-Q2V"/>
+                            <constraint firstItem="JhQ-D7-ATY" firstAttribute="leading" secondItem="Ghf-QP-YC1" secondAttribute="leading" constant="37" id="To8-JL-TCK"/>
                             <constraint firstItem="RwI-Ch-0Qb" firstAttribute="leading" secondItem="Ghf-QP-YC1" secondAttribute="leading" constant="89.670000000000002" id="Vwe-7p-3mJ"/>
+                            <constraint firstItem="8hs-ZF-hS2" firstAttribute="top" secondItem="ydz-n3-Xbu" secondAttribute="bottom" constant="51" id="kF3-HU-kvw"/>
                             <constraint firstItem="ydz-n3-Xbu" firstAttribute="top" secondItem="Ghf-QP-YC1" secondAttribute="top" id="oxr-IT-k3k"/>
                             <constraint firstAttribute="bottom" secondItem="RwI-Ch-0Qb" secondAttribute="bottom" constant="10" id="pMC-OJ-04P"/>
+                            <constraint firstItem="JhQ-D7-ATY" firstAttribute="top" secondItem="ydz-n3-Xbu" secondAttribute="bottom" constant="22" id="sEg-TG-tph"/>
+                            <constraint firstItem="spb-Kl-N86" firstAttribute="leading" secondItem="JhQ-D7-ATY" secondAttribute="trailing" constant="13" id="sc6-Zg-5Ql"/>
                             <constraint firstItem="ydz-n3-Xbu" firstAttribute="trailing" secondItem="Ghf-QP-YC1" secondAttribute="trailing" id="xGz-eZ-PTm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ghf-QP-YC1"/>
                     </view>
                     <connections>
+                        <outlet property="LabelLat" destination="spb-Kl-N86" id="NVX-5f-Iwf"/>
+                        <outlet property="LabelLon" destination="8hs-ZF-hS2" id="sxj-2D-G6i"/>
                         <outlet property="myMapView" destination="ydz-n3-Xbu" id="LLh-az-qyg"/>
                     </connections>
                 </viewController>
@@ -342,6 +382,7 @@
         <image name="Wallpaper" width="666.66668701171875" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pgn-LP-yCp"/>
+        <segue reference="ybR-kT-pmP"/>
+        <segue reference="2xW-pu-Mll"/>
     </inferredMetricsTieBreakers>
 </document>
